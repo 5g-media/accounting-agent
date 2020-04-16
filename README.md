@@ -1,9 +1,12 @@
 # 5G-MEDIA Accounting Agent
 
+This component operates as a mediator among the [5G-MEDIA MAPE service](https://github.com/5g-media/mape) and the [AAA mechanisms](https://github.com/5g-media/5G-MEDIA_AAA) in the 5G-MEDIA Service Platform Virtualization (SVP). 
+
+## Introduction
+
 The purpose of Accounting agent is to find and keep track of the 
 associations between Tenants, Network Services (NS), Virtualized Network Functions (VNFs) and (Virtual Deployment Units) 
-VDUs, receive metrics regarding VDUs for billing purposes of a catalogue tenant and push them to a service through an 
-available API. Accounting agent is basically composed by six components:
+VDUs, receive metrics regarding VDUs for billing purposes of a catalogue tenant and push them to the Accounting API (part of the AAA mechanisms). Accounting agent is basically composed by six components:
 
   * __OSM Notification Handler__: Connects to OSM's intra-Kafka broker and receives notifications about NSs 
   * __Accounting Client__: A client for the API offered by the billing-accounting service
