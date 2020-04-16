@@ -1,0 +1,37 @@
+{
+  "_id": "f375c679-42a8-46e2-9730-a6531c38e2ef",
+  "operationState": "PROCESSING",
+  "id": "f375c679-42a8-46e2-9730-a6531c38e2ef",
+  "operationParams": {
+    "scaleVnfData": {
+      "scaleVnfType": "SCALE_OUT",
+      "scaleByStepData": {
+        "scaling-group-descriptor": "scale_by_one",
+        "member-vnf-index": "2"
+      }
+    },
+    "scaleType": "SCALE_VNF",
+    "nsInstanceId": "efd548ab-4d1a-44da-b530-1a45f0f56074",
+    "lcmOperationType": "scale"
+  },
+  "lcmOperationType": "scale",
+  "links": {
+    "nsInstance": "/osm/nslcm/v1/ns_instances/efd548ab-4d1a-44da-b530-1a45f0f56074",
+    "self": "/osm/nslcm/v1/ns_lcm_op_occs/f375c679-42a8-46e2-9730-a6531c38e2ef"
+  },
+  "isAutomaticInvocation": "False",
+  "statusEnteredTime": 1556175459.4643524,
+  "nsInstanceId": "efd548ab-4d1a-44da-b530-1a45f0f56074",
+  "isCancelPending": "False",
+  "startTime": 1556175459.4643524,
+  "_admin": {
+    "projects_write": [
+      "admin"
+    ],
+    "created": 1556175459.4645183,
+    "projects_read": [
+      "admin"
+    ],
+    "modified": 1556175459.4645183
+  }
+}

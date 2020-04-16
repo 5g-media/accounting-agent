@@ -1,0 +1,19 @@
+_admin:
+    created: 1545062761.5119748
+    modified: 1545062761.5119748
+_id: 37c76074-c7cb-4966-aff7-edfc4cee6782
+id: 37c76074-c7cb-4966-aff7-edfc4cee6782
+isAutomaticInvocation: false
+isCancelPending: false,
+lcmOperationType: terminate
+links:
+    nsInstance: /osm/nslcm/v1/ns_instances/2c80ff71-1781-42c2-a438-9f6c2826be26
+    self: /osm/nslcm/v1/ns_lcm_op_occs/37c76074-c7cb-4966-aff7-edfc4cee6782
+nsInstanceId: 2c80ff71-1781-42c2-a438-9f6c2826be26,
+operationParams:
+    _id: 37c76074-c7cb-4966-aff7-edfc4cee6782
+    autoremove: true
+    nsInstanceId: 2c80ff71-1781-42c2-a438-9f6c2826be26
+operationState: PROCESSING
+startTime: 1545062761.5119283
+statusEnteredTime: 1545062761.5119283

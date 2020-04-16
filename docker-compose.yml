@@ -1,0 +1,58 @@
+version: '3.6'
+volumes:
+  accounting_data:
+  accounting_logs:
+  static_files:
+networks:
+  netACC:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1400
+services:
+  accounting_postgres:
+    image: postgres:${PG_IMAGE_TAG:-9.5.14}
+    restart: always
+    environment:
+      - POSTGRES_USER=${PG_USER}
+      - POSTGRES_PASSWORD=${PG_PASSWORD}
+      - POSTGRES_DB=${PG_DB}
+    volumes:
+      - accounting_data:/var/lib/postgresql/data
+    networks:
+      - netACC
+    hostname: accounting_postgres
+  accounting_redis:
+    image: redis:${REDIS_IMAGE_TAG:-5.0.5}
+    restart: always
+    networks:
+      - netACC
+    hostname: accounting_redis
+  accounting:
+    build:
+      context: .
+      dockerfile: config/docker/Dockerfile
+    image: 5gmedia-accounting
+    restart: always
+    ports:
+      - "${ACC_SUPERVISOR_PORT}:3333"
+    env_file: .env
+    volumes:
+      - accounting_logs:/opt/accounting/logs
+      - static_files:/opt/accounting/static
+    depends_on:
+      - accounting_postgres
+      - accounting_redis
+    networks:
+      - netACC
+    hostname: dcmcm
+  accounting_nginx:
+    build:
+      context: config/nginx
+    tty: true
+    ports:
+      - "${ACC_API_PORT}:80"
+    networks:
+      - netACC
+    restart: always
+    volumes:
+      - static_files:/static

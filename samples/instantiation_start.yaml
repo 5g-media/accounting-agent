@@ -1,0 +1,23 @@
+_admin:
+    created: 1545062732.5816464
+    modified: 1545062732.5816464
+_id: 08f4b767-ccdb-49fa-bf3f-468fbef93ffe
+id: 08f4b767-ccdb-49fa-bf3f-468fbef93ffe
+isAutomaticInvocation: false
+isCancelPending: false
+lcmOperationType: instantiate
+links:
+    nsInstance: /osm/nslcm/v1/ns_instances/2c80ff71-1781-42c2-a438-9f6c2826be26
+    self: /osm/nslcm/v1/ns_lcm_op_occs/08f4b767-ccdb-49fa-bf3f-468fbef93ffe
+nsInstanceId: 2c80ff71-1781-42c2-a438-9f6c2826be26
+operationParams:
+    _id: 08f4b767-ccdb-49fa-bf3f-468fbef93ffe
+    nsDescription: Test
+    nsInstanceId: 2c80ff71-1781-42c2-a438-9f6c2826be26
+    nsName: kostas_test_0001
+    nsdId: d5c99561-ec46-4480-8377-b5b218b8b1e5
+    nsr_id: 2c80ff71-1781-42c2-a438-9f6c2826be26
+    vimAccountId: 41dab0c0-35f4-4c40-b1cd-13e4a79dab48
+operationState: PROCESSING
+startTime: 1545062732.581603
+statusEnteredTime: 1545062732.581603
