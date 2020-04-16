@@ -147,4 +147,4 @@ This project has received funding from the European Union’s Horizon 2020 resea
 of the information it contains.
 
 ## License
-- 
+[Apache 2.0](LICENSE.md)
